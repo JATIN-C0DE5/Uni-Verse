@@ -30,4 +30,3 @@ We welcome contributions from the community to improve and expand the Location P
 3. Make your changes and commit them: `git commit -m 'Add new feature'`
 4. Push to your forked repository: `git push origin feature-name`
 5. Submit a pull request detailing your changes
->>>>>>> 6b92981 (Pushed to github)
