@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { useSelector } from 'react-redux';
 import '../css/mess.css';
 
-import breakfastIcon from "/home/jatin/Desktop/Final_Projects/Uni-Verse/client/img/fried-egg.png";
-import lunchIcon from "/home/jatin/Desktop/Final_Projects/Uni-Verse/client/img/lunch.png";
-import dinnerIcon from "/home/jatin/Desktop/Final_Projects/Uni-Verse/client/img/Dinner.png";
+import breakfastIcon from "/img/fried-egg.png";
+import lunchIcon from "/img/lunch.png";
+import dinnerIcon from "/img/Dinner.png";
 
 
 export default function Mess() {

@@ -12,9 +12,9 @@ import { Document, Page, Text, View, StyleSheet, PDFDownloadLink } from '@react-
 import '../css/laundry.css';
 
 // Import the same images used in mess
-import userIcon from "/home/jatin/Desktop/Final_Projects/Uni-Verse/client/img/user.png";
-import clothesIcon from "/home/jatin/Desktop/Final_Projects/Uni-Verse/client/img/laundryico.png";
-import uploadIcon from "/home/jatin/Desktop/Final_Projects/Uni-Verse/client/img/clean-clothes.png";
+import userIcon from "/img/user.png";
+import clothesIcon from "/img/laundryico.png";
+import uploadIcon from "/img/clean-clothes.png";
 
 export default function Laundry() {
   const { currentUser } = useSelector((state) => state.user);
