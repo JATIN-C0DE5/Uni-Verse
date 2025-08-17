@@ -81,44 +81,44 @@ export default function Home() {
         <div className="contain-right">
           <div className="part1">
             <div className="img-holder" onClick={redirectToEvent}>
-              <img src="./img/events.png" alt="Events" />
+              <img src="./img/eventbook.jpg" alt="Events" />
               <div className="overlay">
                 <h3>Events</h3>
               </div>
               <div className="text">
-                <p>Get a list of all the upcoming and ongoing events.</p>
+                <p>All the events at one place.</p>
               </div>
             </div>
             
             <div className="img-holder" onClick={redirectToMess}>
-              <img src="./img/Mess.png" alt="Mess" />
+              <img src="./img/Mess.jpg" alt="Mess" />
               <div className="overlay">
                 <h3>Mess</h3>
               </div>
               <div className="text">
-                <p>Do not like the food, raise a voice for improving food quality.</p>
+                <p>Review the food you just ate.</p>
               </div>
             </div>
           </div>
           
           <div className="part2">
             <div className="img-holder" onClick={redirectToLaundry}>
-              <img src="./img/Laundry.png" alt="Laundry" />
+              <img src="./img/Laundry.jpg" alt="Laundry" />
               <div className="overlay">
                 <h3>Laundry</h3>
               </div>
               <div className="text">
-                <p>Still using slips for laundry meh, Just digitalize the slip.</p>
+                <p>Your Laundry just got digital.</p>
               </div>
             </div>
             
             <div className="img-holder" onClick={redirectToBooking}>
-              <img src="./img/eventbook.png" alt="Book a seat" />
+              <img src="./img/event.jpg" alt="Book a seat" />
               <div className="overlay">
                 <h3>Book<br />a seat</h3>
               </div>
               <div className="text">
-                <p>Not getting seats in events, then prebook your seats.</p>
+                <p>Prebook your seats NOW.</p>
               </div>
             </div>
           </div>

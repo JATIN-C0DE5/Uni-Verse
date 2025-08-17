@@ -31,7 +31,7 @@ function EventsPage() {
             description: 'Annual technology conference featuring latest innovations in AI and Machine Learning.',
             date: '2024-09-15',
             venue: 'Main Auditorium',
-            imageUrl: './img/tech-summit.jpg',
+            imageUrl: './img/tech-summit.webp',
             category: 'Technology'
           },
           {
