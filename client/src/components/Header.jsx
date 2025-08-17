@@ -83,7 +83,7 @@ export default function Header() {
               </Link>
             ) : (
               <div className="auth-buttons">
-                <Link to='/sign-in' className="auth-button signup">
+                <Link to='/sign-in' className="auth-button signin">
                   Sign In
                 </Link>
               </div>

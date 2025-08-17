@@ -277,29 +277,18 @@ body, html {
 }
 
 .auth-button.signin {
-    color: var(--text-primary);
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.auth-button.signin:hover {
-    color: var(--text-primary);
-    background: rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 255, 255, 0.2);
-}
-
-.auth-button.signup {
     color: white;
     background: linear-gradient(135deg, var(--accent-blue) 0%, #0056d6 100%);
     border: 1px solid var(--accent-blue);
     box-shadow: 0 4px 16px rgba(0, 122, 255, 0.3);
 }
 
-.auth-button.signup:hover {
+.auth-button.signin:hover {
     background: linear-gradient(135deg, #0056d6 0%, var(--accent-blue) 100%);
     transform: translateY(-2px);
     box-shadow: 0 6px 24px rgba(0, 122, 255, 0.4);
 }
+
 
 /* Mobile Menu Button */
 .mobile-menu-btn {
@@ -582,11 +571,11 @@ body, html {
     }
     
     .img-holder {
-        height: 300px; /* Adjusted for mobile */
+        height: 360px; /* Adjusted for mobile */
     }
     
     .img-holder img {
-        height: 180px; /* Adjusted for mobile */
+        height: 290px; /* Adjusted for mobile */
     }
 }
 
@@ -632,11 +621,11 @@ body, html {
     }
     
     .img-holder {
-        height: 250px; /* Smaller on very small screens */
+        height: 270px; /* Smaller on very small screens */
     }
     
     .img-holder img {
-        height: 150px;
+        height: 210px;
     }
     
     .overlay h3 {
