@@ -403,7 +403,7 @@ html, body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    transform: translateY(-5px);
+    /* transform: translateY(-5px); */
     filter: drop-shadow(0 10px 30px rgba(0, 122, 255, 0.3));
 }
 
@@ -498,10 +498,10 @@ html, body {
 /* Right Section - Image */
 #contain-right {
     flex: 1;
-    max-width: 500px;
+    max-width: 600px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content:left;
 }
 
 .image-section {
@@ -514,7 +514,7 @@ html, body {
 .image-container {
     position: relative;
     width: 100%;
-    max-width: 500px; /* Increased from 400px */
+    max-width: 800px; /* Increased from 400px */
     border-radius: 40px; /* Increased border radius */
     overflow: hidden;
     box-shadow: 0 25px 80px rgba(0, 0, 0, 0.5); /* Enhanced shadow */
@@ -549,7 +549,7 @@ html, body {
 }
 
 .image-container:hover {
-    transform: translateY(-15px) scale(1.03); /* Enhanced hover effect */
+    /* transform: translateY(-15px) scale(1.03);  */
     box-shadow: 0 40px 100px rgba(0, 122, 255, 0.35); /* Stronger shadow */
 }
 

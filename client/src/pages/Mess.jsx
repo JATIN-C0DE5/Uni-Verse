@@ -2,6 +2,11 @@ import React, { useState } from "react";
 import { useSelector } from 'react-redux';
 import '../css/mess.css';
 
+import breakfastIcon from "/home/jatin/Desktop/Final_Projects/Uni-Verse/client/img/fried-egg.png";
+import lunchIcon from "/home/jatin/Desktop/Final_Projects/Uni-Verse/client/img/lunch.png";
+import dinnerIcon from "/home/jatin/Desktop/Final_Projects/Uni-Verse/client/img/Dinner.png";
+
+
 export default function Mess() {
   const { currentUser } = useSelector((state) => state.user);
   const [reviewType, setReviewType] = useState('');
@@ -70,7 +75,7 @@ export default function Mess() {
   const menuData = [
     {
       type: 'Breakfast',
-      icon: '🌅',
+      icon: breakfastIcon,
       items: [
         'Pao Bhaji',
         'Milk',
@@ -82,7 +87,7 @@ export default function Mess() {
     },
     {
       type: 'Lunch', 
-      icon: '☀️',
+      icon: lunchIcon,
       items: [
         'Rice',
         'Soya Keema Matar',
@@ -107,7 +112,7 @@ export default function Mess() {
     // },
     {
       type: 'Dinner',
-      icon: '🌙',
+      icon: dinnerIcon,
       items: [
         'Gatta Curry',
         'Tawa Vegetable',
@@ -133,7 +138,9 @@ export default function Mess() {
           {menuData.map((meal, index) => (
             <div key={meal.type} className="menu-card">
               <div className="menu-header">
-                <div className="meal-icon">{meal.icon}</div>
+                <div className="meal-icon">
+                  <img src={meal.icon} alt={meal.type} className="meal-icon-img" />
+                </div>
                 <h3 className="meal-title">{meal.type}</h3>
               </div>
               

@@ -132,40 +132,83 @@ html, body {
     padding: 32px;
     transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
     box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.form-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 122, 255, 0.05) 0%, rgba(255, 149, 0, 0.03) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.form-section:hover::before {
+    opacity: 1;
 }
 
 .form-section:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 50px rgba(0, 122, 255, 0.15);
-    border-color: rgba(0, 122, 255, 0.2);
+    /* transform: translateY(-8px); */
+    box-shadow: 0 10px 20px rgba(0, 122, 255, 0.2);
+    border-color: rgba(0, 122, 255, 0.3);
 }
 
-.section-header {
+/* Menu Header Styles (same as Mess component) */
+.menu-header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin-bottom: 28px;
-    flex-wrap: wrap;
     gap: 16px;
+    margin-bottom: 24px;
+    position: relative;
+    z-index: 2;
 }
 
-.section-title {
+.meal-icon {
     display: flex;
     align-items: center;
-    gap: 12px;
-    font-size: 1.5rem;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    background: rgba(0, 122, 255, 0.1);
+    border-radius: 16px;
+    transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.form-section:hover .meal-icon {
+    background: rgba(0, 122, 255, 0.2);
+    transform: scale(1.1);
+}
+
+.meal-icon-img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.meal-title {
+    font-size: 1.8rem;
     font-weight: 700;
     color: var(--text-primary);
+    transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 
-.section-icon {
-    font-size: 1.8rem;
+.form-section:hover .meal-title {
+    color: var(--accent-gold);
+    text-shadow: 0 2px 20px rgba(255, 149, 0, 0.4);
 }
 
 .section-description {
     color: var(--text-secondary);
     font-size: 14px;
     margin-top: 8px;
+    position: relative;
+    z-index: 2;
 }
 
 .total-counter {
@@ -175,6 +218,9 @@ html, body {
     font-size: 14px;
     font-weight: 600;
     color: var(--accent-blue);
+    position:relative;
+    margin-left: auto;
+    z-index: 2;
 }
 
 .total-number {
@@ -187,6 +233,8 @@ html, body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
+    position: relative;
+    z-index: 2;
 }
 
 .input-group {
@@ -227,6 +275,8 @@ html, body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
+    position: relative;
+    z-index: 2;
 }
 
 .clothing-item {
@@ -311,6 +361,8 @@ html, body {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    position: relative;
+    z-index: 2;
 }
 
 .upload-input-group {
@@ -645,10 +697,30 @@ html, body {
         border-radius: 20px;
     }
     
-    .section-header {
+    .menu-header {
         flex-direction: column;
-        align-items: flex-start;
+        text-align: center;
         gap: 12px;
+        align-items: center;
+    }
+    
+    .meal-icon {
+        width: 56px;
+        height: 56px;
+    }
+    
+    .meal-icon-img {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .meal-title {
+        font-size: 1.5rem;
+    }
+    
+    .total-counter {
+        order: -1;
+        margin-bottom: 8px;
     }
     
     .clothing-grid {
@@ -709,11 +781,22 @@ html, body {
         border-radius: 16px;
     }
     
-    .section-title {
-        font-size: 1.3rem;
-        flex-direction: column;
-        text-align: center;
+    .menu-header {
         gap: 8px;
+    }
+    
+    .meal-icon {
+        width: 48px;
+        height: 48px;
+    }
+    
+    .meal-icon-img {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .meal-title {
+        font-size: 1.3rem;
     }
     
     .clothing-grid {

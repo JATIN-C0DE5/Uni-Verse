@@ -83,11 +83,11 @@ export default function Header() {
               </Link>
             ) : (
               <div className="auth-buttons">
-                <Link to='/sign-in' className="auth-button signin">
+                {/* <Link to='/sign-in' className="auth-button signin">
                   Sign In
-                </Link>
+                </Link> */}
                 <Link to='/sign-up' className="auth-button signup">
-                  Sign Up
+                  Sign-in / Sign-Up
                 </Link>
               </div>
             )}

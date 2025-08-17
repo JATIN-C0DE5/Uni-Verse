@@ -7,7 +7,7 @@ export default function About() {
       <div id="container">
         <div id="contain-left">
           <div className="hero-section">
-            <h1 className="main-title">A team of Three enthusiasts</h1>
+            <h1 className="main-title">A team of Three Musketeers</h1>
             <h2 className="subtitle">
               We call ourselves <span className="highlight">JAY</span>-den
             </h2>
@@ -30,7 +30,7 @@ export default function About() {
             </div>
           </div>
           
-          <div className="info">
+          {/* <div className="info">
             <div className="story-card">
               <p id="paragraph">
                 You are probably wondering why our team name is JAY-den.
@@ -41,7 +41,7 @@ export default function About() {
                 team name.
               </p>
             </div>
-          </div>
+          </div> */}
         </div>
         
         <div id="contain-right">

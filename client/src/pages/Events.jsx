@@ -36,7 +36,7 @@ function EventsPage() {
           },
           {
             _id: '2',
-            name: 'Cultural Night',
+            name: 'Cultural Night 2025',
             description: 'A vibrant evening celebrating diverse cultures through music, dance, and food.',
             date: '2024-09-20',
             venue: 'Student Center',

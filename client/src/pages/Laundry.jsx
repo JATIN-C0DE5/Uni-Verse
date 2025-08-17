@@ -11,6 +11,11 @@ import { useNavigate } from 'react-router-dom';
 import { Document, Page, Text, View, StyleSheet, PDFDownloadLink } from '@react-pdf/renderer';
 import '../css/laundry.css';
 
+// Import the same images used in mess
+import userIcon from "/home/jatin/Desktop/Final_Projects/Uni-Verse/client/img/user.png";
+import clothesIcon from "/home/jatin/Desktop/Final_Projects/Uni-Verse/client/img/laundryico.png";
+import uploadIcon from "/home/jatin/Desktop/Final_Projects/Uni-Verse/client/img/clean-clothes.png";
+
 export default function Laundry() {
   const { currentUser } = useSelector((state) => state.user);
   const navigate = useNavigate();
@@ -39,17 +44,17 @@ export default function Laundry() {
   const [showSuccess, setShowSuccess] = useState(false);
 
   const clothingItems = [
-    { key: 'tshirts', label: 'T-Shirts', icon: '👕' },
-    { key: 'shirts', label: 'Shirts', icon: '👔' },
-    { key: 'pants', label: 'Pants', icon: '👖' },
-    { key: 'bedsheets', label: 'Bed Sheets', icon: '🛏️' },
-    { key: 'lowers', label: 'Lowers', icon: '🩲' },
-    { key: 'shorts', label: 'Shorts', icon: '🩳' },
-    { key: 'towel', label: 'Towels', icon: '🏖️' },
-    { key: 'pillowcover', label: 'Pillow Covers', icon: '🛌' },
-    { key: 'kurta', label: 'Kurtas', icon: '🥻' },
-    { key: 'pajama', label: 'Pajamas', icon: '👘' },
-    { key: 'dupatta', label: 'Dupattas', icon: '🧣' }
+    { key: 'tshirts', label: 'T-Shirts'},
+    { key: 'shirts', label: 'Shirts'},
+    { key: 'pants', label: 'Pants'},
+    { key: 'bedsheets', label: 'Bed Sheets'},
+    { key: 'lowers', label: 'Lowers'},
+    { key: 'shorts', label: 'Shorts' },
+    { key: 'towel', label: 'Towels' },
+    { key: 'pillowcover', label: 'Pillow Covers' },
+    // { key: 'kurta', label: 'Kurtas' },
+    // { key: 'pajama', label: 'Pajamas' },
+    // { key: 'dupatta', label: 'Dupattas' }
   ];
 
   const handleImageSubmit = (e) => {
@@ -212,7 +217,7 @@ export default function Laundry() {
           <h1 className="main-title">Digital Laundry Service</h1>
           <div className="subtitle-group">
             <h2 className="subtitle">No more lost slips!</h2>
-            <h3 className="sub-subtitle">Create your digital laundry listing and download your slip</h3>
+            {/* <h3 className="sub-subtitle">Create your digital laundry listing and download your slip</h3> */}
           </div>
         </div>
 
@@ -220,11 +225,11 @@ export default function Laundry() {
           <div className="form-sections">
             {/* Personal Information Section */}
             <div className="form-section">
-              <div className="section-header">
-                <h3 className="section-title">
-                  <span className="section-icon">👤</span>
-                  Personal Information
-                </h3>
+              <div className="menu-header">
+                <div className="meal-icon">
+                  <img src={userIcon} alt="Personal Information" className="meal-icon-img" />
+                </div>
+                <h3 className="meal-title">Personal Information</h3>
               </div>
               
               <div className="input-grid">
@@ -273,11 +278,11 @@ export default function Laundry() {
 
             {/* Clothing Items Section */}
             <div className="form-section">
-              <div className="section-header">
-                <h3 className="section-title">
-                  <span className="section-icon">👕</span>
-                  Clothing Items
-                </h3>
+              <div className="menu-header">
+                <div className="meal-icon">
+                  <img src={clothesIcon} alt="Clothing Items" className="meal-icon-img" />
+                </div>
+                <h3 className="meal-title">Clothing Items</h3>
                 <div className="total-counter">
                   Total Items: <span className="total-number">{getTotalItems()}</span>
                 </div>
@@ -287,7 +292,6 @@ export default function Laundry() {
                 {clothingItems.map((item) => (
                   <div key={item.key} className="clothing-item">
                     <div className="clothing-header">
-                      <span className="clothing-icon">{item.icon}</span>
                       <label htmlFor={item.key} className="clothing-label">
                         {item.label}
                       </label>
@@ -330,15 +334,15 @@ export default function Laundry() {
 
             {/* Images Section */}
             <div className="form-section">
-              <div className="section-header">
-                <h3 className="section-title">
-                  <span className="section-icon">📸</span>
-                  Upload Images
-                </h3>
-                <p className="section-description">
-                  Upload photos of your laundry items (max 6 images, 2MB each)
-                </p>
+              <div className="menu-header">
+                <div className="meal-icon">
+                  <img src={uploadIcon} alt="Upload Images" className="meal-icon-img" />
+                </div>
+                <h3 className="meal-title">Upload Image</h3>
               </div>
+              <p className="section-description">
+                Upload a photo of your laundry items
+              </p>
               
               <div className="upload-area">
                 <div className="upload-input-group">
